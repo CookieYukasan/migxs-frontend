@@ -1,0 +1,146 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  margin-right: 8rem;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin-bottom: 2rem !important;
+    width: 380px;
+    height: 215px;
+  }
+
+  span {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
+.form {
+  max-width: 350px;
+  width: 100%;
+
+  .forgotPasswordEmailSended {
+    border: 4px solid #4ade86;
+    border-radius: 14px;
+    padding: 0.5rem;
+    display: flex;
+    margin-bottom: 1.23rem;
+
+    svg {
+      color: #4ade86;
+      font-size: 65px;
+      margin: auto 0;
+    }
+
+    div {
+      margin: 0.6rem 0.9rem;
+      margin-left: 1.1rem;
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .socialButtons button {
+    border: 0;
+    border-radius: 14px;
+    width: 100%;
+    padding: 1rem 0;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.23rem;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 1.23rem;
+  }
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.23rem;
+
+    label {
+      margin-bottom: 0.3rem;
+    }
+
+    input {
+      border: 2px solid #b1bbd8;
+      border-radius: 14px;
+      padding: 1rem 1rem;
+      transition: border 0.3s;
+
+      &:focus {
+        border: 2px solid rgba(238, 20, 91, 0.5);
+      }
+    }
+  }
+
+  .inputPassword {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 2.5rem;
+      right: 1rem;
+      font-size: 23px;
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  button {
+    background-color: #ee145b;
+    border: 0;
+    border-radius: 14px;
+    width: 100%;
+    padding: 15px 0;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  span.forgetPassword {
+    color: #ee145b;
+    cursor: pointer;
+    margin: 1.23rem 0;
+    display: block;
+  }
+
+  span:last-child {
+    margin-top: 1.23rem;
+    display: block;
+
+    strong {
+      cursor: pointer;
+      color: #ee145b;
+    }
+  }
+
+  .termsOfUse {
+    display: flex;
+
+    svg {
+      cursor: pointer;
+    }
+
+    p {
+      text-align: left;
+      margin-left: 0.8rem;
+      margin-top: 0.3rem;
+      font-size: 0.9rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.searchInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    border: 2px solid #b1bbd8;
+    border-radius: 14px;
+    padding: 0.8rem 3.7rem;
+    font-size: 1.2rem;
+
+    ::placeholder {
+      color: #141619;
+    }
+  }
+
+  svg {
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .searchIcon {
+    left: 1rem;
+    color: #ee145b;
+  }
+
+  .closeIcon {
+    right: 1rem;
+    color: black;
+  }
+}

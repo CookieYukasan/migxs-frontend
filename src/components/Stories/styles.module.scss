@@ -1,0 +1,57 @@
+.storiesWrapper {
+  margin-top: 1.23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: 1.23rem;
+    }
+
+    &:last-child {
+      margin-left: 1.23rem;
+    }
+  }
+
+  .createStory {
+    position: relative !important;
+    cursor: pointer;
+
+    img {
+      border-radius: 50%;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    &::after {
+      content: "+";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ee145b;
+      border: 3px solid white;
+      border-radius: 50%;
+      bottom: -2px;
+      right: -2px;
+      text-align: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+  }
+
+  .storyImage {
+    margin-left: 1.23rem !important;
+    cursor: pointer;
+
+    img {
+      border-radius: 50%;
+      width: 4.5rem;
+      height: 4.5rem;
+      border: 3px solid #ee145b !important;
+    }
+  }
+}

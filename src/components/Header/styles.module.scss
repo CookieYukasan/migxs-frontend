@@ -1,0 +1,51 @@
+.headerWrapper {
+  padding: 0.7rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 4px solid #ee145b;
+  align-items: center;
+  margin-bottom: 1.23rem;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.userInformations {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  svg {
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  span {
+    margin: 0 0.9rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  img {
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  @media (max-width: 790px) {
+    span {
+      display: none;
+    }
+
+    svg {
+      margin-right: 1.23rem;
+    }
+  }
+
+  @media (max-width: 610px) {
+    svg {
+      display: none;
+    }
+  }
+}

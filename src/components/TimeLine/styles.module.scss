@@ -1,0 +1,13 @@
+.timelineWrapper {
+  margin-top: 1.23rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .modelPost {
+    img {
+      border-radius: 14px;
+    }
+  }
+}
