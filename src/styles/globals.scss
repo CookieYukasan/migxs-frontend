@@ -22,31 +22,30 @@
   box-sizing: border-box;
 }
 
+.pageWrapper {
+  max-width: 1980px;
+  margin: 0 auto;
+}
+
 svg {
   font-size: 19px !important;
 }
 
 @media (max-width: 1980px) {
   html {
-    font-size: 84.53%;
+    font-size: 90%;
   }
 }
 
 @media (max-width: 1366px) {
   html {
-    font-size: 82%;
+    font-size: 65%;
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 950px) {
   html {
-    font-size: 93.75%;
-  }
-}
-
-@media (max-width: 720px) {
-  html {
-    font-size: 87.5%;
+    font-size: 80%;
   }
 }
 

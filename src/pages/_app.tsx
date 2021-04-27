@@ -13,7 +13,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <Component {...pageProps} />
+      <div className="pageWrapper">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
