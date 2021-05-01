@@ -17,10 +17,15 @@ type TimeLineProps = {
 };
 
 const TimeLine = ({ models }: TimeLineProps) => {
+
+  const isOdd = (num: number) => {
+    return num % 2;
+  }
+
   return (
     <div className={styles.timelineWrapper}>
-      {models.map((model) => (
-        <article key={model.username} className={styles.modelPost}>
+      {models.map((model, index) => (
+        <article key={model.username} className={[styles.modelPost, (isOdd(index)) ? styles.private : undefined].join(" ")}>
           <Image
             className={styles.postImage}
             src={model.image}

@@ -5,9 +5,13 @@
   margin: 0 auto;
   margin-top: 1.23rem;
   
+  .modelPost.private {
+    div:first-child > img{
+      filter: blur(6px) grayscale(100%);
+    }
+  }
   .postImage {
     width: 250px !important;
-    
     border-radius: 14px;
   }
 
