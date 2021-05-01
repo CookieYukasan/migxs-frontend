@@ -43,3 +43,11 @@
     padding-right: 1.23rem;
   }
 }
+
+@include sm {
+  .userInformations {
+    svg, span {
+      display: none;
+    }
+  }
+}

@@ -28,8 +28,9 @@ const TimeLine = ({ models }: TimeLineProps) => {
             height={625}
             alt={`${model.username}'s Post`}
             objectFit="cover"
+            layout="responsive"
           />
-          <div className={styles.postInformationsWrapper}>
+          <div className={styles.postInformationWrapper}>
             <div className={styles.postEngagementWrapper}>
               <div className={styles.postEngagement}>
                 <button className={styles.postLikes}>
@@ -53,14 +54,13 @@ const TimeLine = ({ models }: TimeLineProps) => {
                 </button>
               </div>
             </div>
-            <div className={styles.modelInformationsWrapper}>
-              <Image
+            <div className={styles.modelInformationWrapper}>
+              <img
                 className={styles.modelAvatar}
                 src={model.avatar}
                 width={50}
                 height={50}
                 alt={`${model.username}'s Post`}
-                objectFit="cover"
               />
               <div className={styles.modelBioWrapper}>
                 <strong>

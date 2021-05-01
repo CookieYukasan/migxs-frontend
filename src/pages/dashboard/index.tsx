@@ -99,13 +99,13 @@ const Dashboard = () => {
         <div className={styles.typeSearchChoose}>
           <span
             onClick={() => setTypeSearch(1)}
-            className={typeSearch === 1 && styles.activeType}
+            className={typeSearch === 1 ? styles.activeType : undefined}
           >
             Seguindo
           </span>
           <span
             onClick={() => setTypeSearch(2)}
-            className={typeSearch === 2 && styles.activeType}
+            className={typeSearch === 2 ? styles.activeType : undefined}
           >
             Aleatório
           </span>

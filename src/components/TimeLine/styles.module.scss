@@ -11,7 +11,7 @@
     border-radius: 14px;
   }
 
-  .postInformationsWrapper{
+  .postInformationWrapper{
     margin: 0.5rem 0 3rem 0;
     
     .postEngagementWrapper{
@@ -49,7 +49,7 @@
         background-color: #515965;
         border: 0;
 
-        > svg{
+        svg{
           font-size: 1.6rem !important;
           color: white;
         }
@@ -60,9 +60,8 @@
       }
     }
 
-    .modelInformationsWrapper{
+    .modelInformationWrapper{
       display: flex;
-      justify-content: space-between;
 
       .modelAvatar{
         border-radius: 50%;
@@ -72,16 +71,20 @@
         background-color: #ee145b;
         border: 0;
         border-radius: 14px;
-        height: 3rem;
-        padding: 0 1.5rem;
+        padding: 0 1.3rem;
         color: white;
         font-weight: 800;
         font-size: 1.1rem;
+        text-align: right;
+        margin-left: auto;
+        margin-right: 0;
       }
 
       .modelBioWrapper{
         display: flex;
         flex-direction: column;
+        margin-left: 1.23rem;
+        align-self: center;
 
         svg{
           margin-left: 0.5rem;
@@ -92,12 +95,11 @@
         }
 
         p{
-          width: calc(681px - 16rem);
+          max-width: calc(681px - 16rem);
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
           font-size: 1.2rem;
-          text-align: left;
         }
       }
     }
@@ -109,11 +111,45 @@
   .timelineWrapper{
     max-width: 90vw;
     margin: 1.23rem 2rem;
+  }
 
-    .postInformationsWrapper
-    .modelInformationsWrapper
-    .modelBioWrapper p{
-      width: calc(681px - 40rem);
+  .modelBioWrapper{
+    margin-left: 1.23rem;
+  }
+
+  .modelBioWrapper > p{
+    max-width: 57vw !important;
+  }
+}
+
+@include sm {
+  .modelBioWrapper svg,
+  .modelAvatar{
+    display: none !important;
+  }
+
+  .modelBioWrapper{
+    margin-left: 0 !important;
+    justify-self: left;
+  }
+
+  .postEngagement button{
+    font-size: 1rem !important;
+    
+    & + button{
+      margin-left: 0.2rem !important;
     }
+  }
+
+  .postActions button{
+    & + button{
+      margin-left: 0.2rem !important;
+    }
+  }
+}
+
+@include rwd(400) {
+  .modelBioWrapper > p{
+    max-width: 48vw !important;
   }
 }
