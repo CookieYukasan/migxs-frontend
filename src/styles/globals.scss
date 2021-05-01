@@ -1,3 +1,5 @@
+@import './breakpoints.scss';
+
 :root {
   --white: #fff;
 
@@ -31,19 +33,19 @@ svg {
   font-size: 19px !important;
 }
 
-@media (max-width: 1980px) {
+@include xl {
   html {
-    font-size: 90%;
+    font-size: 85%;
   }
 }
 
-@media (max-width: 1366px) {
+@include rwd(1366) {
   html {
-    font-size: 65%;
+    font-size: 75%;
   }
 }
 
-@media (max-width: 950px) {
+@include md {
   html {
     font-size: 80%;
   }

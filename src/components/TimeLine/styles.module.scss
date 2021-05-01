@@ -1,17 +1,119 @@
-.timelineWrapper {
-  margin-top: 1.23rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@import '../../styles/breakpoints.scss';
 
-  .modelPost {
-    img {
-      border-radius: 14px;
+.timelineWrapper {
+  max-width: 681px;
+  margin: 0 auto;
+  margin-top: 1.23rem;
+  
+  .postImage {
+    width: 250px !important;
+    
+    border-radius: 14px;
+  }
+
+  .postInformationsWrapper{
+    margin: 0.5rem 0 3rem 0;
+    
+    .postEngagementWrapper{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.23rem;
+
+      .postEngagement{
+        display: flex;
+
+        button{
+          padding: 0.4rem 0.7rem;
+          border-radius: 14px;
+          background-color: #515965;
+          border: 0;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.15rem;
+
+          svg{
+            margin-right: 0.5rem;
+          }
+
+          & + button{
+            margin-left: 0.9rem;
+          }
+        }
+      }
+
+      .postActions button{
+        padding: 0.4rem 0.7rem;
+        border-radius: 14px;
+        background-color: #515965;
+        border: 0;
+
+        > svg{
+          font-size: 1.6rem !important;
+          color: white;
+        }
+
+        & + button{
+          margin-left: 0.9rem;
+        }
+      }
     }
 
-    .modelPostInformations{
-      
+    .modelInformationsWrapper{
+      display: flex;
+      justify-content: space-between;
+
+      .modelAvatar{
+        border-radius: 50%;
+      }
+
+      button{
+        background-color: #ee145b;
+        border: 0;
+        border-radius: 14px;
+        height: 3rem;
+        padding: 0 1.5rem;
+        color: white;
+        font-weight: 800;
+        font-size: 1.1rem;
+      }
+
+      .modelBioWrapper{
+        display: flex;
+        flex-direction: column;
+
+        svg{
+          margin-left: 0.5rem;
+        }
+
+        strong{
+          font-size: 1.4rem;
+        }
+
+        p{
+          width: calc(681px - 16rem);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 1.2rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
+@include md {
+  .timelineWrapper{
+    max-width: 90vw;
+    margin: 1.23rem 2rem;
+
+    .postInformationsWrapper
+    .modelInformationsWrapper
+    .modelBioWrapper p{
+      width: calc(681px - 40rem);
     }
   }
 }

@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints.scss';
+
 .searchInput {
   position: relative;
   display: flex;
@@ -5,6 +7,7 @@
   justify-content: center;
 
   input {
+    max-width: 100%;
     border: 2px solid #b1bbd8;
     border-radius: 14px;
     padding: 0.8rem 3.7rem;
@@ -29,5 +32,13 @@
   .closeIcon {
     right: 1rem;
     color: black;
+  }
+}
+
+@include md {
+  .searchInput {
+    input, svg{
+      display: none;
+    }
   }
 }

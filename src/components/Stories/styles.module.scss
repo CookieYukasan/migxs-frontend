@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints.scss';
+
 .storiesWrapper {
   margin-top: 1.23rem;
   display: flex;
@@ -25,7 +27,6 @@
       img {
         border-radius: 50%;
         width: 4.5rem;
-        height: 4.5rem;
         border: 3px solid #ee145b !important;
       }
     }
@@ -37,7 +38,6 @@
       img {
         border-radius: 50%;
         width: 4.5rem;
-        height: 4.5rem;
       }
 
       &::after {
@@ -48,12 +48,35 @@
         background-color: #ee145b;
         border: 3px solid white;
         border-radius: 50%;
-        bottom: -3px;
-        right: -3px;
+        bottom: -0.2rem;
+        right: -0.2rem;
         text-align: center;
         color: white;
         font-weight: 800;
         font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include md {
+  .storiesWrapper {
+    margin: 1.23rem 1rem;
+
+    svg {
+      display: none;
+    }
+  
+    .storySection {
+      margin-right: 1.23rem !important;
+    
+      .createStory::after {
+        width: 1.2rem;
+        height: 1.2rem;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }

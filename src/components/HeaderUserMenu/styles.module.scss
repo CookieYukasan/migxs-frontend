@@ -1,8 +1,10 @@
+@import '../../styles/breakpoints.scss';
+
 .menuWrapper {
   display: none;
   position: absolute;
   right: -1rem;
-  top: 4.35rem;
+  top: 4.2rem;
   border: 2px solid #b1bbd8;
   border-radius: 14px;
   background: white;
@@ -13,8 +15,8 @@
     content: "";
     display: block;
     position: absolute;
-    top: -1.9rem;
-    right: 1.58rem;
+    top: -1.8rem;
+    right: 1.60rem;
     width: 0;
     height: 0;
     border-style: solid;
@@ -26,12 +28,12 @@
     content: "";
     display: block;
     position: absolute;
+    top: -1.44rem;
     right: 1.75rem;
     width: 0;
     height: 0;
     border-style: solid;
 
-    top: -1.54rem;
     border-color: transparent transparent white transparent;
     border-width: 10px;
   }
@@ -39,12 +41,12 @@
   li {
     list-style-type: none;
     display: flex;
-    display: block;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: left;
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: 600;
+
 
     &.activeMenu {
       color: #ee145b;
@@ -69,6 +71,37 @@
   &:checked {
     + .menuWrapper {
       display: block;
+    }
+  }
+}
+
+@include lg{
+  .menuWrapper{
+    top: 4.6rem;
+    right: -1rem;
+    width: 15rem;
+
+    &::after{
+      top: -1.63rem;
+      right: 1.76rem;
+    }
+
+    &::before{
+      top: -1.97rem;
+    }
+  }
+}
+
+@include md {
+  .menuWrapper{
+    top: 4.4rem;
+
+    &::after{
+      top: -1.53rem;
+    }
+
+    &::before{
+      top: -1.87rem;
     }
   }
 }

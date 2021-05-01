@@ -1,3 +1,5 @@
+@import '../../styles/breakpoints.scss';
+
 .headerWrapper {
   padding: 0.7rem 0;
   display: flex;
@@ -32,20 +34,12 @@
     border-radius: 50%;
     cursor: pointer;
   }
+}
 
-  @media (max-width: 790px) {
-    span {
-      display: none;
-    }
-
-    svg {
-      margin-right: 1.23rem;
-    }
-  }
-
-  @media (max-width: 610px) {
-    svg {
-      display: none;
-    }
+@include md {
+  .headerWrapper {
+    justify-content: space-between;
+    padding-left: 1.23rem;
+    padding-right: 1.23rem;
   }
 }

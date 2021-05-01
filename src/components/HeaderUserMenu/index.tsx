@@ -63,7 +63,7 @@ const LiOption = ({ pathName, children }: LiOptionProps) => {
 
   return (
     <Link href={pathName}>
-      <li className={router.pathname == pathName && styles.activeMenu}>
+      <li className={router.pathname == pathName ? styles.activeMenu : undefined}>
         {children}
       </li>
     </Link>
