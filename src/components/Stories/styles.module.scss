@@ -1,10 +1,10 @@
 @import '../../styles/breakpoints.scss';
 
 .storiesWrapper {
-  margin-top: 1.23rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1.23rem;
 
   svg {
     cursor: pointer;
@@ -16,13 +16,18 @@
 
   .storySection {
     margin-left: 1.23rem !important;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    width: calc(681px + 4rem);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    user-select: none;
+    overflow: hidden;
 
     .story {
       margin-left: 1.23rem;
+      display: inline-block;
+      cursor: pointer;
 
       img {
         border-radius: 50%;
@@ -34,6 +39,7 @@
     .createStory {
       position: relative !important;
       cursor: pointer;
+      display: inline-block;
 
       img {
         border-radius: 50%;
@@ -79,5 +85,9 @@
         justify-content: center;
       }
     }
+  }
+
+  .story img{
+    width: 50px !important;
   }
 }

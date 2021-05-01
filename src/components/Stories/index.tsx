@@ -1,16 +1,8 @@
 import styles from "./styles.module.scss";
 import Image from "next/image";
-import Link from "next/link";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
-import { useEffect, useRef } from "react";
+import { useRef, MouseEvent } from "react";
+import Link from "next/link";
 
 type Model = {
   username: string;
@@ -23,35 +15,21 @@ type StoriesProps = {
 
 const Stories = ({ models }: StoriesProps) => {
   const storiesRef = useRef<HTMLDivElement>(null);
-  let isDown = false;
-  let startX;
   let scrollLeft;
 
-  useEffect(() => {
-    storiesRef.current.addEventListener("mousedown", (e) => {
-      isDown = true;
-      startX = e.pageX - storiesRef.current.offsetLeft;
+  const handleModelStoryClick = (e: MouseEvent, type: string) => {    
+    if(type === 'next') {
       scrollLeft = storiesRef.current.scrollLeft;
-    });
-    storiesRef.current.addEventListener("mouseleave", () => {
-      isDown = false;
-    });
-    storiesRef.current.addEventListener("mouseup", () => {
-      isDown = false;
-    });
-    storiesRef.current.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - storiesRef.current.offsetLeft;
-      const walk = (x - startX) * 1;
-      storiesRef.current.scrollLeft = scrollLeft - walk;
-      console.log(walk);
-    });
-  }, []);
+      storiesRef.current.scrollLeft = scrollLeft + 30;
+    } else if (type === 'prev') {
+      scrollLeft = storiesRef.current.scrollLeft;
+      storiesRef.current.scrollLeft = scrollLeft - 30;
+    }
+  }
 
   return (
     <div className={styles.storiesWrapper}>
-      <FaArrowLeft />
+      <FaArrowLeft onClick={(e) => handleModelStoryClick(e, 'prev')} />
       <section ref={storiesRef} className={styles.storySection}>
         <div className={styles.createStory}>
           <Image src={models[0].avatar} width={150} height={150} />
@@ -59,7 +37,7 @@ const Stories = ({ models }: StoriesProps) => {
 
         {models.map((model) => (
           <div key={model.username} className={styles.story}>
-            <Link href={`/model/${model.username}`}>
+            <Link href={`/${model.username}`}>
               <Image
                 src={model.avatar}
                 width={50}
@@ -71,7 +49,7 @@ const Stories = ({ models }: StoriesProps) => {
         ))}
       </section>
 
-      <FaArrowRight />
+      <FaArrowRight onClick={(e) => handleModelStoryClick(e, 'next')} />
     </div>
   );
 };
